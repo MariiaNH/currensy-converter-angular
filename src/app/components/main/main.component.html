@@ -1,0 +1,37 @@
+<div class='converter'>
+  <div class='converter_section'>
+    <select
+      class="converter_select"
+      (change)="selectingBaseCurrency($event)"
+      >
+      <option class='converter_select-option'>Оберіть валюту</option>
+      <option class='converter_select-option' *ngFor="let el of currencies">{{el.txt}}</option>
+    </select>
+
+    <input
+      type="number"
+      value={{baseValue}}
+      (input)="enteringBaseValue($event)"
+      class='converter_input'
+      min="1"
+    >
+  </div>
+
+  <div class='converter_section'>
+    <select
+      class='converter_select'
+      (change)="selectingQuotedCurrency($event)"
+      >
+      <option class='converter_select-staticOption'>Оберіть валюту</option>
+      <option  class='converter_select-option' *ngFor="let el of currencies">{{el.txt}}</option>
+    </select>
+
+    <input
+      type="number"
+      class='converter_input'
+      min="1"
+      value={{quotedValue}}
+      (input)="enteringQuotedValue($event)"
+    >
+  </div>
+</div>

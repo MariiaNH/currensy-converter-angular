@@ -1,0 +1,35 @@
+.converter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+
+  &_section {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+  }
+
+  &_select {
+    padding: 20px;
+    outline: none;
+    border-radius: 10px;
+    background-color: #9D00FF;
+    border: 0;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Pacifico', cursive;
+  }
+
+  &_input {
+    text-align: center;
+    outline: none;
+    border: 0;
+    background-color: transparent;
+    font-family: 'Pacifico', cursive;
+    color: #9D00FF;
+    font-size: 60px;
+  }
+}
